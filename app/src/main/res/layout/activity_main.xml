@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/currency_number"
+        android:layout_width="98dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="28dp"
+        android:imeOptions="actionDone"
+        android:inputType="numberDecimal|numberSigned"
+        android:singleLine="true"
+        android:maxLength="7"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/from_image" />
+
+    <ImageView
+        android:id="@+id/from_image"
+        android:layout_width="72dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flag_rub" />
+
+    <ImageView
+        android:id="@+id/to_image"
+        android:layout_width="72dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="104dp"
+        app:layout_constraintStart_toEndOf="@+id/from_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flag_usd" />
+
+    <WebView
+        android:id="@+id/webview"
+
+        android:layout_width="421dp"
+        android:layout_height="335dp"
+        android:layout_marginTop="144dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.262"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_number"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/reset_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="136dp"
+        android:layout_marginEnd="36dp"
+        android:text="Сброс"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/to_image" />
+
+    <Button
+        android:id="@+id/convert_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="68dp"
+        android:text="Конвертировать"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currency_number" />
+
+    <TextView
+        android:id="@+id/to_currencyview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="104dp"
+        android:layout_marginTop="36dp"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+        app:layout_constraintStart_toEndOf="@+id/currency_number"
+        app:layout_constraintTop_toBottomOf="@+id/to_image" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="184dp"
+        android:text="₽"
+        android:textAppearance="@android:style/TextAppearance.Material.Medium"
+
+        app:layout_constraintStart_toEndOf="@+id/currency_number"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

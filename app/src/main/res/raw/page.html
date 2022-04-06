@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body style="background-color:black">
+    <!-- TradingView Widget BEGIN -->
+    <div class="tradingview-widget-container">
+      <div  id="tradingview_9b187"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+      <script type="text/javascript">
+      var url_string = window.location.href
+var url = new URL(url_string);
+var message= url.searchParams.get("currency");
+  new TradingView.MediumWidget(
+  {
+  "symbols": [
+    [
+      "FX",
+      "FX:"+message+ "|1M"
+    ],
+      [
+      "FX_IDC",
+      "FX_IDC:"+message+ "|1M"
+    ]
+  ],
+  "width": "600",
+  "height": "500",
+  "locale": "ru",
+  "colorTheme": "dark",
+  "gridLineColor": "rgba(42 ,46, 57, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": false,
+  "showVolume": false,
+  "scalePosition": "right",
+  "scaleMode": "Normal",
+  "fontFamily": "-apple-system, BlinkMacSystemFont, SegoeUI, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+  "noTimeScale": false,
+  "valuesTracking": "1",
+  "chartType": "area",
+  "lineColor": "#2962ff",
+  "topColor": "rgba(41, 98, 255, 0.3)",
+  "bottomColor": "rgba(41, 98, 255, 0)",
+  "container_id": "tradingview_9b187"
+}
+  );
+  </script>
+    </div>
+  </body>
+</html>
+
